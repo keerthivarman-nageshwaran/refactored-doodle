@@ -1,7 +1,6 @@
 import WebSocket from "ws";
 
-const args = process.argv.slice(2);
-const playerUrl = args[0];
+const playerUrl = process.env.BOT_URL;
 console.log("Argument from CLI:", playerUrl);
 
 console.log("Bot started...");

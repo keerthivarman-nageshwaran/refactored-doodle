@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js https://api.splplatform.com/samplegame/v1/ws/p1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
