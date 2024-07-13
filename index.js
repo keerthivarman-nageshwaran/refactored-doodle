@@ -1,17 +1,13 @@
 import WebSocket from "ws";
 
 const args = process.argv.slice(2);
-const argument = args[0];
-console.log("Argument from CLI:", argument);
-const player = argument[0];
+const playerUrl = args[0];
+console.log("Argument from CLI:", playerUrl);
 
 console.log("Bot started...");
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 
-const ws = new WebSocket(
-  `https://api.splplatform.com/samplegame/v1/ws/${player}`
-  // `http://localhost:5106/samplegame/v1/ws/${player}`
-);
+const ws = new WebSocket(playerUrl);
 
 ws.on("error", console.error);
 
